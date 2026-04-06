@@ -1,6 +1,7 @@
-Leitor de DI's/
-dinfo/
-Relatório.*
+*Leitor*
+*.xlsx
+*.xlsm
+*.exe
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
