@@ -13,7 +13,7 @@ def gerarLinha(pdf_path:str):
         'DI': r"DUIMP[^\d\n]*(.*?-\d)",
         
         'II': r"II:[^\d\n]*(.*,\d\d)",
-        'IPI': r"Sem-IPI_ainda",                        # Atualizar padrão quando tivermos uma DUIMP com IPI
+        'IPI': r"I\.P\.I\..*?,\d{2} (.*\d)",                        # Atualizar padrão quando tivermos uma DUIMP com IPI
         'PIS': r"PIS/PASEP:[^\d\n]*(.*,\d\d)",
         'COFINS': r"COFINS:[^\d\n]*(.*,\d\d)",
         
@@ -22,7 +22,7 @@ def gerarLinha(pdf_path:str):
         'Seguro': r"Seguro[^\d\n]*(\d.*?,\d\d) / (\d.*?,\d\d) / (\d.*\d)",
         'CIF': r"VMLE\+FRETE\+SEGURO[^\d\n]*(\d.*?,\d\d) / (\d.*?,\d\d) / (\d.*\d)",
         
-        'Capatazia': r"Capatazia - [^\d\n]*(\d.*\d)",      # Atualizar padrão quando tivermos uma DUIMP com IPI
+        'Capatazia': r"Capatazia - [^\d\n]*(\d.*\d)",      # Atualizar padrão quando tivermos uma DUIMP com capatazia
         'AFRMM': r"A\.F\.R\.M\.M\.:[^\d\n]*(.*,\d\d)",
         'Siscomex': r"SISCOMEX:[^\d\n]*(.*,\d\d)",
     }
