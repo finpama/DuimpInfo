@@ -1,0 +1,9 @@
+[project]
+name = "PySide Widgets Project"
+
+[tool.pyside6-project]
+files = ["mainwindow.py", "layout.ui", "ui_layout.py", "modules.py", "requirements.txt"]
+
+[tool.taskipy.tasks]
+dev = "pyside6-uic layout.ui -o ui_layout.py && py app.py"
+compile = "pyinstaller --onefile --noconsole --icon=icone.ico --add-data 'icone.ico;.' app.py"
