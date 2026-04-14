@@ -9,7 +9,7 @@ def gerarLinha(pdf_path:str):
     
     patterns = {
         'Processo': r"REF\. CLIENTE[^\d]*? (.*\d[A-Z])", # Pattern caso tenha letra na referência
-        'DI': r"DUIMP[^\d\n]*(.*?-\d)",
+        'DUIMP': r"DUIMP[^\d\n]*(.*?-\d)",
         
         'II': r"II:[^\d\n]*(.*,\d\d)",
         'IPI': r"I\.P\.I\..*?,\d{2} (.*\d)",                        # Atualizar padrão quando tivermos uma DUIMP com IPI
